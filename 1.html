@@ -21,7 +21,7 @@
 
 
 		<meta content="authenticity_token" name="csrf-param" />
-<meta content="Mr6NE39kB6/uoVOF3btrJHX3QDIcjUYXxJXZAL8tg/U=" name="csrf-token" />
+<meta content="UnBYjSfdeDcOJajjvFsQAfrPBVBvZiOlTtFZZcQEqQ4=" name="csrf-token" />
 		<style id="user-css-output" type="text/css"></style>
 	</head>
 	<body>
@@ -217,14 +217,142 @@ hello
 &gt;&gt;&gt; 
 (test) nikiladonya@nikiladonya:~$ deactivate // деактивация
 nikiladonya@nikiladonya:~$ rmvirtualenv test // удаления
-Removing test...</code></pre></div></div></section>
+Removing test...</code></pre></div></div></section><section data-id="cbaaee405a6ab7108ec28dd3d25582b5"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 81px;" data-block-id="f6623b1a07144a94141a705d87437fef"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>PEP 8</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 140px;" data-block-id="83f38d66a8e46f45709681f7fe0240e9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(255, 255, 255);">
+<p style="text-align:left"><span style="font-size:0.5em">Этот документ описывает соглашение о том, как писать код для языка python, включая стандартную библиотеку, входящую в состав python.<br>
+Ключевая идея Гуидо такова: код читается намного больше раз, чем пишется. Собственно, рекомендации о стиле написания кода направлены на то, чтобы улучшить читаемость кода и сделать его согласованным между большим числом проектов. В идеале, весь код будет написан в едином стиле, и любой сможет легко его прочесть.</span></p>
+
+<p style="text-align:left"><span style="font-size:0.5em">Это руководство о согласованности и единстве. Согласованность с этим руководством очень важна. Согласованность внутри одного проекта еще важнее. А согласованность внутри модуля или функции — самое важное.</span></p>
+</div></div></section><section class="stack" data-id="10bd296fe94c2633009894ef8a842189"><section data-id="43b305711138500c2a189cd2f54386b7"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 80px;" data-block-id="30407b8ef084935fdb7e792c386b2f61"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Основные положения:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 669px; left: 146px; top: 155px;" data-block-id="5eac819760bc41adff9481aa84ba9a94"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em">Используйте 4 пробела на каждый уровень отступа. Лучше пробелы, чем табы.</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Продолжительные строки должны выравнивать обернутые элементы либо вертикально, используя неявную линию в скобках (круглых, квадратных или фигурных), либо с использованием висячего отступа. При использовании висячего отступа следует применять следующие соображения: на первой линии не должно быть аргументов, а остальные строки должны четко восприниматься как продолжение линии.</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Ограничьте длину строки максимум 79 символами. Доки и комментарии в 72.</span></li>
+</ul>
+</div></div></section><section data-id="a4fd8dfd674a8993ecb6887a7700d98d"><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 893px; height: 421px; left: 34px; top: 131px;" data-block-id="354a1923ac66a560204e1e7b8d944fd1"><div class="sl-block-content" style="z-index: 11;"><pre class="lua"><code># Правильно:
+# Выровнено по открывающему разделителю
+foo = long_function_name(var_one, var_two,
+                         var_three, var_four)
+
+# Больше отступов включено для отличения его от остальных
+def long_function_name(
+        var_one, var_two, var_three,
+        var_four):
+    print(var_one)
+
+# Неправильно:
+# Аргументы на первой линии запрещены, если не используется вертикальное выравнивание
+foo = long_function_name(var_one, var_two,
+    var_three, var_four)
+
+# Больше отступов требуется, для отличения его от остальных
+def long_function_name(
+    var_one, var_two, var_three,
+    var_four):
+    print(var_one)</code></pre></div></div></section><section data-id="3dd6879ff5c263660665fe4d2cf3ed93"><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 886px; height: 440px; left: 37px; top: 113px;" data-block-id="3f86452c595901a756525db0acfb4334"><div class="sl-block-content" style="z-index: 11;"><pre class="lua"><code># Закрывающие круглые/квадратные/фигурные скобки в многострочных конструкциях 
+# могут находиться под первым непробельным символом последней строки списка, например:
+
+my_list = [
+    1, 2, 3,
+    4, 5, 6,
+    ]
+result = some_function_that_takes_arguments(
+    'a', 'b', 'c',
+    'd', 'e', 'f',
+    )
+
+# либо быть под первым символом строки, начинающей многострочную конструкцию:
+
+my_list = [
+    1, 2, 3,
+    4, 5, 6,
+]
+result = some_function_that_takes_arguments(
+    'a', 'b', 'c',
+    'd', 'e', 'f',
+)</code></pre></div></div></section><section data-id="5d42d10221ac4acb8322205451ec31f5"><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 843px; height: 195px; left: 59px; top: 190px;" data-block-id="f1d30ca313a8334dadd8e82ddf09dc62"><div class="sl-block-content" style="z-index: 11;"><pre class="lua"><code># Длинные строки могут быть разбиты на несколько строк, обернутые в скобки. 
+# Это предпочтительнее использования обратной косой черты для продолжения строки.
+
+# Обратная косая черта все еще может быть использована время от времени. 
+# Например, длинная конструкция with не может использовать неявные продолжения, 
+# так что обратная косая черта является приемлемой:
+with open('/path/to/some/file/you/want/to/read') as file_1, \
+        open('/path/to/some/file/being/written', 'w') as file_2:
+    file_2.write(file_1.read())</code></pre></div></div></section><section data-id="787844e0e8c6e96bb6bf7549c1b8fdc2"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 872px; left: 44px; top: 129px;" data-block-id="cc49496e7a6d6482857676a44ccdb2e9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em">Отделяйте функции верхнего уровня и определения классов двумя пустыми строками.</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Определения методов внутри класса разделяются одной пустой строкой.</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Дополнительные пустые строки возможно использовать для разделения различных групп похожих функций. Пустые строки могут быть опущены между несколькими связанными однострочниками (например, набор фиктивных реализаций).</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Используйте пустые строки в функциях, чтобы указать логические разделы.</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">В Python 3 не нужно указывать кодировку в файлах с кодом.</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Каждый импорт, как правило, должен быть на отдельной строке.</span></li>
+</ul>
+</div></div></section><section data-id="5db4d9f71bf26b468bd40ac57b167f8a"><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 692px; height: 322px; left: 134px; top: 329px;" data-block-id="6113374e930d522488ced8b9cee6a5d8"><div class="sl-block-content" style="z-index: 11;"><pre class="lua"><code># Правильно:
+
+import os
+import sys
+
+import mypkg.sibling # абсолютный импорт
+
+# Неправильно:
+
+import sys, os
+
+from . import sibling # относительный
+
+# В то же время, можно писать так:
+
+from subprocess import Popen, PIPE</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 69px;" data-block-id="7e5143476a4c038bb5761ebcefc6a066"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li style="text-align:left"><span style="font-size:0.7em">Рекомендуется абсолютное импортирование.</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">Импорты должны быть сгруппированы в следующем порядке:</span></li>
+</ul>
+
+<ol>
+	<li style="text-align:left"><span style="font-size:0.7em">импорты из стандартной библиотеки</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">импорты сторонних библиотек</span></li>
+	<li style="text-align:left"><span style="font-size:0.7em">импорты модулей текущего проекта</span></li>
+</ol>
+</div></div></section><section data-id="5afee8625f768610bcb809971e0dacc5"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 70px;" data-block-id="5752efd2ec9b8524b2d52eb25c07411d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Соглашения по именованию:</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 140px;" data-block-id="b5ec6a8193450a69c51681b7c36ecc61"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui">
+<ul>
+	<li style="font-size:15px; text-align:left">
+<span style="color:rgb(255, 255, 255); text-align:left">_inner_var: </span>Нижнее подчеркивания первым символом говорит о слабой скрытности переменной. </li>
+	<li style="font-size:15px; text-align:left">class_: так пишется, когда слово уже является baseword'ом питона.</li>
+	<li style="font-size:15px; text-align:left">__double_leading_underscore: изменяет имя атрибута класса, то есть в классе FooBar поле __boo становится _FooBar__boo.</li>
+	<li style="font-size:15px; text-align:left">__double_leading_and_trailing_underscore__ (двойное подчеркивание в начале и в конце имени): магические методы или атрибуты.</li>
+	<li style="font-size:15px; text-align:left">Модули должны иметь короткие имена, состоящие из маленьких букв.</li>
+	<li style="font-size:15px; text-align:left">Имена классов должны обычно следовать соглашению CapWords.</li>
+	<li style="font-size:15px; text-align:left">Имена функций должны состоять из маленьких букв, а слова разделяться символами подчеркивания.</li>
+	<li style="font-size:15px; text-align:left">
+	<p>Всегда используйте self в качестве первого аргумента метода экземпляра объекта.</p>
+	</li>
+	<li style="font-size:15px; text-align:left">
+	<p>Всегда используйте cls в качестве первого аргумента метода класса.</p>
+	</li>
+	<li style="font-size:15px; text-align:left">
+	<p>Для имен методов и переменных экземпляров классов используется тот же стиль, что и для имен функций.</p>
+	</li>
+	<li style="font-size:15px; text-align:left">
+	<p>Константы обычно объявляются на уровне модуля и записываются только заглавными буквами.</p>
+	</li>
+</ul>
+</div></div></section></section>
 			</div>
 		</div>
 
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"editor_grid":true,"editor_snap":true,"developer_mode":true,"speaker_layout":null,"phone_number":null,"phone_country_code":null},"email":"nikiladonya@gmail.com","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1,"storage_used":491209,"storage_limit":262144000},"deck":{"id":1022976,"slug":"python","title":"Python","description":"","width":960,"height":700,"visibility":"all","published_at":"2017-06-10T17:59:37.956Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/cfc751b9e307e414b855b60f81b21706/thumb.jpg?130758002","view_count":0,"user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"black-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":true,"slide_number":true,"rtl":false,"version":2,"collaborative":true,"deck_user_editor_limit":1,"data_updated_at":1497125014987,"font_typekit":null,"font_google":null,"notes":{"0e4aec8e45250017fb3d86a4d9bc6347":"","551fb037eac5e521b80266511fd1400f":"","ac056458724b965aa80ffa99f1d9c9c3":"Тут запустить или сказать им запустить","b874417a5b348397dad42e83e95e06c2":"Когда вы запускаете программу, практически незаметно для вас Python сна-\nчала компилирует ваш исходный текст (инструкции в файле) в формат, из-\nвестный под названием байт-код. Компиляция – это просто этап перевода\nпрограммы, а байт-код – это низкоуровневое, платформонезависимое пред-\nставление исходного текста программы. Интерпретатор Python транслирует\nкаждую исходную инструкцию в группы инструкций байт-кода, разбивая ее\nна отдельные составляющие. Такая трансляция в байт-код производится для\nповышения скорости – байт-код выполняется намного быстрее, чем исходные\nинструкции в текстовом файле."}}};
+	var SLConfig = {"current_user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"editor_grid":true,"editor_snap":true,"developer_mode":true,"speaker_layout":null,"phone_number":null,"phone_country_code":null},"email":"nikiladonya@gmail.com","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1,"storage_used":491209,"storage_limit":262144000},"deck":{"id":1022976,"slug":"python","title":"Python","description":"","width":960,"height":700,"visibility":"all","published_at":"2017-06-10T17:59:37.956Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/cfc751b9e307e414b855b60f81b21706/thumb.jpg?130758002","view_count":0,"user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"black-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":true,"slide_number":true,"rtl":false,"version":2,"collaborative":true,"deck_user_editor_limit":1,"data_updated_at":1497291802083,"font_typekit":null,"font_google":null,"notes":{"0e4aec8e45250017fb3d86a4d9bc6347":"","551fb037eac5e521b80266511fd1400f":"","ac056458724b965aa80ffa99f1d9c9c3":"Тут запустить или сказать им запустить","b874417a5b348397dad42e83e95e06c2":"Когда вы запускаете программу, практически незаметно для вас Python сна-\nчала компилирует ваш исходный текст (инструкции в файле) в формат, из-\nвестный под названием байт-код. Компиляция – это просто этап перевода\nпрограммы, а байт-код – это низкоуровневое, платформонезависимое пред-\nставление исходного текста программы. Интерпретатор Python транслирует\nкаждую исходную инструкцию в группы инструкций байт-кода, разбивая ее\nна отдельные составляющие. Такая трансляция в байт-код производится для\nповышения скорости – байт-код выполняется намного быстрее, чем исходные\nинструкции в текстовом файле."}}};
 </script>
 
 		<script>

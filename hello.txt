@@ -1,0 +1,1 @@
+echo "hello, I am student Sobolev Sergey"

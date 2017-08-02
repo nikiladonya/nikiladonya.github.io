@@ -21,7 +21,7 @@
 
 
 		<meta content="authenticity_token" name="csrf-param" />
-<meta content="N9qVaY91B3l931ggWfm9xPKW7EhjurE1m/AayCdXQG8=" name="csrf-token" />
+<meta content="rkRSa7WwWK5WlqI/2pfXBHAa5n7iCGUDJUKCml82YWY=" name="csrf-token" />
 		<style id="user-css-output" type="text/css"></style>
 	</head>
 	<body>
@@ -324,6 +324,25 @@ with ThreadPoolExecutor(max_workers=5) as pool:
 	<li><span style="font-size:0.5em">as_completed - очень удобная утилита. Принимает список отложенных вычислений и возвращает генератор, выдающий завершенные вычисления по мере готовности.</span></li>
 	<li><span style="font-size:0.5em">Конечно же, поддерживается принудительная отмена отложенного, но еще не начавшегося выполнятся вычисления, добавление обратного вызова на завершение future и таймауты.</span></li>
 </ul>
+</div></div></section></section><section class="stack" data-id="efae55b1d8c4310dc2dffda5d1104951"><section data-id="ed0c0eb2f4d5d5bdfbe1f722f2eb0a2e"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 22px;" data-block-id="55cecfe6d62ebcf46f0d9245b13e3ea3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Задания</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 944px; left: 16px; top: 88px;" data-block-id="37465ca4f80a17352670437d875f4e40"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:0.7em">Напишите функцию odd_primes(end, start), которая ищет все простые числа в диапазоне от заданного числа start (по умолчанию 3) до заданного числа end. Запустите ее:</span></p>
+
+<ul>
+	<li><span style="font-size:0.7em">Три раза последовательно в диапазоне от 3 до 10000, от 10001 до 20000, от 20001 до 30000. </span></li>
+	<li><span style="font-size:0.7em">Также запустите ее три раза с теми же аргументами, но каждую в отдельной потоке с помощью  threading.Thread. Забудьте стартануть треды и дождаться их окончания.</span></li>
+	<li><span style="font-size:0.7em">Также запустите ее три раза с теми же аргументами, но каждую в отдельной потоке с помощью  multiprocessing.Process. Забудьте стартануть процессы и дождаться их окончания.</span></li>
+</ul>
+
+<p><span style="font-size:0.7em">Замерьте время исполнения каждого варианта. Подумайте над результатами. И не запускайти эти скрипты в PyCharm в Debug режиме, это все замедлит.</span></p>
+
+<p> </p>
+
+<p style="text-align:left"><span style="font-size:0.5em">Продолжение ниже</span></p>
+</div></div></section><section data-id="db697ea510d9e77e21f4ec2820937c53"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 924px; left: 18px; top: 54px;" data-block-id="29d3cc5efe4bc67d20a87dfdd4fbd273"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Усовершенствуйте решение второго задания из прошлой лекции. Создайте класс, один из методов которого способен принимать не одиночный url, а массив url'ов и возвращать массив строк, полученных  из заголовков html страницек, которые вы получите из этих заданных url'ов. Используйте ThreadPoolExecutor из библиотеки concurrent.futures. Его максимальное количество воркеров должно быть равно количеству ядер на компьтере. Получение каждого отдельного урла должно запускаться с помощью метода submit у <span style="color:rgb(255, 255, 255)">ThreadPoolExecutor. Получение результата от отдельного урла должно происходить через объект Future, который вернет метод submit. Подробности в документации.</span> Проверьте работу вашего класса с помощью любых 20 url'ов. </p>
 </div></div></section></section>
 			</div>
 		</div>
@@ -331,7 +350,7 @@ with ThreadPoolExecutor(max_workers=5) as pool:
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"editor_grid":true,"editor_snap":true,"developer_mode":true,"speaker_layout":null,"phone_number":null,"phone_country_code":null},"email":"nikiladonya@gmail.com","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1,"storage_used":1595986,"storage_limit":262144000},"deck":{"id":1048941,"slug":"python-8","title":"Python. 8 лекция","description":"","width":960,"height":700,"visibility":"all","published_at":"2017-07-30T21:59:11.327Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/bfcbb617820fe8574cfb6961f283a0a5/thumb.jpg?437103543","view_count":1,"user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"black-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":true,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1501595241107,"font_typekit":null,"font_google":null,"notes":{}}};
+	var SLConfig = {"current_user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"editor_grid":true,"editor_snap":true,"developer_mode":true,"speaker_layout":null,"phone_number":null,"phone_country_code":null},"email":"nikiladonya@gmail.com","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1,"storage_used":1595986,"storage_limit":262144000},"deck":{"id":1048941,"slug":"python-8","title":"Python. 8 лекция","description":"","width":960,"height":700,"visibility":"all","published_at":"2017-07-30T21:59:11.327Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/bfcbb617820fe8574cfb6961f283a0a5/thumb.jpg?437103543","view_count":1,"user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"black-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":true,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1501705895458,"font_typekit":null,"font_google":null,"notes":{}}};
 </script>
 
 		<script>

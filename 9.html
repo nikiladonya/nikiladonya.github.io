@@ -21,7 +21,7 @@
 
 
 		<meta content="authenticity_token" name="csrf-param" />
-<meta content="7Lv0n8mDcSiNSY4FI7j+7Iu8KPXXT41a9Jsv4zf5Zu4=" name="csrf-token" />
+<meta content="zGE9S6RIfTVWngJ4Jbbd6HFWCSkJQRJd+oBL+JuJf+U=" name="csrf-token" />
 		<style id="user-css-output" type="text/css"></style>
 	</head>
 	<body>
@@ -221,7 +221,7 @@ urlpatterns = [
 <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 481px;" data-block-id="7d293d0cdbefd60160fddc5d2d5f53bd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p>И откройте браузер:</p>
 </div></div>
-<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 353px; height: 35px; left: 304px; top: 533px;" data-block-id="60c398b169c8680231c5ccb9b5cf5b82"><div class="sl-block-content" style="z-index: 14;"><pre class="python"><code>http://localhost:8000/polls/</code></pre></div></div></section><section data-id="bbd42531673993451d357989472cb9aa"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 225px;" data-block-id="283510e7df571ad07a68e408ebcb1567"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 353px; height: 35px; left: 304px; top: 533px;" data-block-id="60c398b169c8680231c5ccb9b5cf5b82"><div class="sl-block-content" style="z-index: 14;"><pre class="python"><code>http://localhost:8000/coolapp/</code></pre></div></div></section><section data-id="bbd42531673993451d357989472cb9aa"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 225px;" data-block-id="283510e7df571ad07a68e408ebcb1567"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <p>Окей, у вас есть сайт!</p>
 
 <p>Подумайте, где у вас представление, где управление, а где модель.</p>
@@ -262,7 +262,7 @@ urlpatterns = [
 </div></div></section><section data-id="a7df32be00060f7c75f1de9dd53d0e91"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 171px;" data-block-id="fa58a75c8a5b36952f120b34fcd825b1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <p>Теперь правим код нашего index во views:</p>
 </div></div>
-<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 532px; height: 80px; left: 214px; top: 257px;" data-block-id="6fac10719c45da71fa98bc7b99f5b9c3"><div class="sl-block-content" style="z-index: 12;"><pre class="python"><code>def index(request):
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 532px; height: 80px; left: 215px; top: 257px;" data-block-id="6fac10719c45da71fa98bc7b99f5b9c3"><div class="sl-block-content" style="z-index: 12;"><pre class="python"><code>def index(request):
     return render(request, 'coolapp/index.html')</code></pre></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 358px;" data-block-id="e806d3457280809d092528a2266a9ead"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p>И добавляем наше приложение в сеттинги:</p>
@@ -281,14 +281,27 @@ urlpatterns = [
 <p>Давайте аналогично напишем detail.html в шаблонах и detail во views.</p>
 
 <p>Вы встретите несколько ошибок из-за того, что это отображение ждет параметр question_id. Походу мы будем разбирать эти проблемы.</p>
-</div></div></section></section>
+</div></div></section></section><section data-id="840536eb56fdb7508be79052b77bacbd"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 31px;" data-block-id="6c3b88b51351555f16639c31e403ca7f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>Задания</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 917px; left: 30px; top: 60px;" data-block-id="82e1a26ace057f42fd9b83fcfc36be81"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:0.5em">Смотрите, у нас есть сайт, вы написали сайт, одну view и шаблон для него. Представим, что Вы хотите очень хотите написать сайт, где можно выкладывать описания, названия <span style="color:rgb(255, 255, 255)">фильмов и</span> оценки с рецензиями к ним. Попробуйте себя в роли проектировщиков и архитекторов. Представьте, какие странички могут быть у него. Добавьте необходимое количество views и соотвествующие html шаблоны для них. В шаблонах напишите простенький html код с текстом, соответствующим данному view (например, шаблон главной странички должен содержать описание сайта и т. д.). Изучите язык шаблонов django (например, тут https://docs.djangoproject.com/en/1.7/topics/templates/, думаю, есть и русская версия) и попробуйте в функции render в вашем view прокинуть объекты из питоновского кода внутрь вашего html шаблона и отобразить их, например, так:</span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 816px; height: 72px; left: 72px; top: 384px;" data-block-id="3eb01177d35e65b6fd3cde2b01c132cd"><div class="sl-block-style" style="z-index: 13;"><div class="sl-block-content" style="z-index: 13;"><pre class="python"><code># это во views.py
+def index(request):
+    return render(request, 'coolapp/index.html', {'sitename': 'ABOUT FILMS'})</code></pre></div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 888px; left: 44px; top: 519px;" data-block-id="39b5e4172e11c32040a833d5b1b236f8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p><span style="font-size:0.5em"><span style="color:rgb(255, 255, 255)">Не усложняйте, достаточно будет условного содержания и простого оформления. Задание нужно делать в вашей главной ветке (1 буква имени + фамилия), в следующих лекциях мы будем продолжать работать в ней, добавляя и обновляя написанный сейчас Вами код.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 410px; height: 56px; left: 275px; top: 462px;" data-block-id="ba7801b397402ecd91319f2e272d56d3"><div class="sl-block-content" style="z-index: 15;"><pre class="python"><code># это в coolapp/index.html
+&lt;h1&gt;HELLO, You on {{ sitename }}&lt;/h1&gt;</code></pre></div></div></section>
 			</div>
 		</div>
 
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"editor_grid":true,"editor_snap":true,"developer_mode":true,"speaker_layout":null,"phone_number":null,"phone_country_code":null},"email":"nikiladonya@gmail.com","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1,"storage_used":1854104,"storage_limit":262144000},"deck":{"id":1052046,"slug":"python-9","title":"Python. 9 лекция","description":"","width":960,"height":700,"visibility":"all","published_at":"2017-08-06T21:31:01.933Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/f35da54d1fee94efdf567d047998b6b1/thumb.jpg?237967027","view_count":0,"user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"black-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":true,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1502137291969,"font_typekit":null,"font_google":null,"notes":{}}};
+	var SLConfig = {"current_user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"editor_grid":true,"editor_snap":true,"developer_mode":true,"speaker_layout":null,"phone_number":null,"phone_country_code":null},"email":"nikiladonya@gmail.com","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1,"storage_used":1854104,"storage_limit":262144000},"deck":{"id":1052046,"slug":"python-9","title":"Python. 9 лекция","description":"","width":960,"height":700,"visibility":"all","published_at":"2017-08-06T21:31:01.933Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/f35da54d1fee94efdf567d047998b6b1/thumb.jpg?237967027","view_count":0,"user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"black-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":true,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1502313354850,"font_typekit":null,"font_google":null,"notes":{}}};
 </script>
 
 		<script>

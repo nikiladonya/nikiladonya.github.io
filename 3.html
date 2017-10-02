@@ -21,7 +21,7 @@
 
 
 		<meta content="authenticity_token" name="csrf-param" />
-<meta content="lD33MHi6DxILw/eJd/TU9Ew+KQB4GMA76jI1jagZDDo=" name="csrf-token" />
+<meta content="e9rgZKqzaIVRUVYd774w5KCNc0Obwt0Lh9WIfKv3v0s=" name="csrf-token" />
 		<style id="user-css-output" type="text/css"></style>
 	</head>
 	<body>
@@ -188,7 +188,56 @@ print("4: {}".format(x))
     print("1: {}".format(x))
 
 test_outer()
-print("1: {}".format(x))</code></pre></div></div></div></section></section><section class="stack" data-id="867cdb74de613bbef60565c3b7575c8b"><section data-id="3c927922e1febbd102a1d12f9041b3e7"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 31px;" data-block-id="5b5e9641d409e14cf8014ed091ed4e4b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+print("1: {}".format(x))</code></pre></div></div></div></section><section data-id="efe1af9ea3be6c349e5d77e3ea8fd899"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 101px;" data-block-id="97e7bafe6d0acf315ba247dacba4fc2a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong>Рекурсия</strong></p>
+
+<p><strong>Лучше всего понимать на примере:</strong></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong>Функция может вызывать сама себя!</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 478px; height: 226px; left: 241px; top: 218px;" data-block-id="23d35e8fb2c0e8b483c4bf16fa355bac"><div class="sl-block-content" data-highlight-theme="github-gist" style="z-index: 12;"><pre class="python"><code>def rec(a,b):
+    if b == 0:
+        return 1
+    else:
+        return a * rec(a, b-1)
+
+a, b = 2, 3
+print(rec(a,b))
+</code></pre></div></div></section><section data-id="75af6795d49c6c220a359956e9a5aa04"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 782px; left: 80px; top: 160px;" data-block-id="996bba1a65198a3e69269940f9a98ecf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong>Единица возвращается в предыдущий вызов функции, где умножается на a равную двум и опять возвращается в предудщий вызов. Так пока не дойдёт до первого вызова, который вернёт значение своё функции print(). Чтобы лучше представить это, нужно мыслено заменить вызовы функции на её тело:</strong></p>
+</div></div></section><section data-id="997b9be86ef61bfdbfc141a8a2393012"><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 730px; height: 411px; left: 115px; top: 113px;" data-block-id="0f899629277cf8cb9864157e94f41563"><div class="sl-block-content" data-highlight-theme="github-gist" style="z-index: 11;"><pre class="python"><code>(
+    if 3 == 0:
+        return 1
+    else:
+        return 2 * (
+            if 2 == 0:
+                return 1
+            else:
+                return 2 * (
+                    if 1 == 0:
+                        return 1
+                    else:
+                        return 2 *  (
+                            if 0 == 0:
+                                return 1
+                            else:
+                                #Эта ветка никогда не выполнится
+                        )
+                )
+        )
+)</code></pre></div></div></section></section><section class="stack" data-id="867cdb74de613bbef60565c3b7575c8b"><section data-id="3c927922e1febbd102a1d12f9041b3e7"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 31px;" data-block-id="5b5e9641d409e14cf8014ed091ed4e4b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <p><strong>Встроенные функции</strong></p>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 885px; left: 25px; top: 84px;" data-block-id="123e73995e843bf3cb67890aca8f3ce0"><div class="sl-block-style" style="z-index: 12; transform: rotate(360deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
@@ -274,7 +323,7 @@ nikiladonya@nikiladonya:~$ python3.5 test.py</code></pre></div></div>
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"editor_grid":true,"editor_snap":true,"developer_mode":true,"speaker_layout":null,"phone_number":null,"phone_country_code":null},"email":"nikiladonya@gmail.com","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1,"storage_used":2878606,"storage_limit":262144000},"deck":{"id":1032225,"slug":"python-3","title":"Python. 3 лекция.","description":"","width":960,"height":700,"visibility":"all","published_at":"2017-06-26T19:19:02.223Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/74b881b1d8fd1f114dd560d0439185a8/thumb.jpg?981883334","view_count":1,"user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"silver-green","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":true,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1506458655976,"font_typekit":null,"font_google":null,"notes":{}}};
+	var SLConfig = {"current_user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"editor_grid":true,"editor_snap":true,"developer_mode":true,"speaker_layout":null,"phone_number":null,"phone_country_code":null},"email":"nikiladonya@gmail.com","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1,"storage_used":2878606,"storage_limit":262144000},"deck":{"id":1032225,"slug":"python-3","title":"Python. 3 лекция.","description":"","width":960,"height":700,"visibility":"all","published_at":"2017-06-26T19:19:02.223Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/74b881b1d8fd1f114dd560d0439185a8/thumb.jpg?981883334","view_count":1,"user":{"id":456598,"username":"nikiladonya","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/83f18e766f74691325118090cb550713?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":297363,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"silver-green","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":true,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1506971611790,"font_typekit":null,"font_google":null,"notes":{}}};
 </script>
 
 		<script>
